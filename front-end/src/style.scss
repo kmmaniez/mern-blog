@@ -1,0 +1,226 @@
+$lightGreen: #b9e7e7;
+
+.app{
+    display: flex;
+    justify-content: center;
+    .container{
+        width: 1024px;
+
+        .link{
+            text-decoration: none;
+        }
+
+        // LOGIN & REGIS
+        .auth{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: $lightGreen;
+
+            .h1{
+                font-size: 20px;
+                color: teal;
+                margin-bottom: 20px;
+            }
+
+            form{
+                display: flex;
+                flex-direction: column;
+                padding: 50px;
+                background-color: #fff;
+                width: 200px;
+                gap: 20px;
+
+                input{
+                    padding: 10px;
+                    border: none;
+                    border-bottom: 1px solid gray;
+                }
+
+                button{
+                    padding: 10px;
+                    border: none;
+                    cursor: pointer;
+                    background-color: teal;
+                    color: white;
+                }
+
+                p{
+                    font-size: 12px;
+                    color: red;text-align: center;
+                }
+                span{
+                    font-size: 12px;
+                    text-align: center;
+                }
+            }
+        }
+
+        // nav
+        .navbar{
+            .container{
+                padding: 10px 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .logo{
+                    width: 50%;
+                }
+                .links{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    width: 50;
+                    h6{
+                        font-size: 16px;
+                        font-weight: 300;
+                    }
+                }
+                span{
+                    cursor: pointer;
+                    margin: 0 12px;
+                }
+                .write{
+                    background-color: $lightGreen;
+                    width: 50px;
+                    height: 50px;
+                    padding: 8px;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-weight: 300;
+                    border: 1px solid white;
+
+                    &:hover{
+                        width: 50px;
+                        height: 50px;
+                        color: teal;
+                        // background-color: black;
+                        border: 1px solid black;
+                    }
+                }
+            }
+        }
+
+        // footer 
+        footer{
+            margin: 48px 0;
+            position: static;
+            padding: 48px 16px;
+            bottom: 0;
+            left: 0;
+            background-color: teal;
+        }
+
+        // home 
+        .home{
+
+            .posts{
+                margin-top: 58px;
+                display: flex;
+                flex-direction: column;
+                gap: 150px;
+
+                .post{
+                    display: flex;
+                    gap: 100px;
+
+                    &:nth-child(2n+1){
+                        flex-direction: row-reverse;
+                    }
+
+                    .img{
+                        flex: 2;
+                        position: relative;
+
+                        &::after{
+                            content: "";
+                            position: absolute;
+                            top: 20px;
+                            z-index: -1;
+                            left: -70px;
+                            width: 100%;
+                            height: 100%;
+                            background-color: $lightGreen;
+                        }
+
+                        img{
+                            width: 100%;
+                            max-height: 400px;
+                            object-fit: cover;
+                        }
+                    }
+
+                    .content{
+                        flex: 3;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+
+                        h4{
+                            font-size: 48px;
+                        }
+
+                        p{
+                            font-size: 18px;
+                        }
+
+                        button{
+                            width: max-content;
+                            padding: 10px 20px;
+                            border: none;
+                            cursor: pointer;
+                            background-color: white;
+                            color: teal;
+                            border: 1px solid teal;
+
+                            &:hover{
+                                border: 1px solid white;
+                                background-color: $lightGreen;
+                                color: black;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .single{
+            display: flex;
+            gap: 50px;
+            .content{
+                flex: 5;
+
+                img{
+                    width: 100%;
+                    height: 300px;
+                    object-fit: cover;
+                }
+
+                .user{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    font-size: 14px;
+
+                    img{
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+
+                    span{
+                        font-weight: bold;
+                    }
+                }
+            }
+            .menu{
+                flex: 2;
+            }
+        }
+    }
+}
